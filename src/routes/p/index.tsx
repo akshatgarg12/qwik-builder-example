@@ -2,7 +2,7 @@ import { component$, Resource, useResource$ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
 import { getContent, RenderContent, getBuilderSearchParams } from "@builder.io/sdk-qwik";
 
-import { CUSTOM_COMPONENTS } from "~/components/hamburger";
+import { CUSTOM_COMPONENTS, MyFunComponent } from "~/components/hamburger";
 import { Counter } from "~/integrations/react/mui";
 
 export const BUILDER_PUBLIC_API_KEY = '8335d18816304315aebeb7e9532281ce'; // <-- Add your Public API KEY here
@@ -35,7 +35,7 @@ export default component$(() => {
   return (
     <>
       <Counter client:visible />
-      {/* <MyFunComponent /> */}
+      <MyFunComponent />
       <Resource
         value={builderContentRsrc}
         onPending={() => <div>Loading...</div>}
