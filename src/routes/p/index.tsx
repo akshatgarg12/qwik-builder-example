@@ -35,7 +35,6 @@ export default component$(() => {
   return (
     <>
       <Counter client:visible />
-      {/* <MyFunComponent /> */}
       <Resource
         value={builderContentRsrc}
         onPending={() => <div>Loading...</div>}
