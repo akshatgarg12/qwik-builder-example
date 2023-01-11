@@ -6,7 +6,7 @@ import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import {useState} from 'react'
 
 export const MUIButton = qwikify$(Button);
-export const MUISlider = qwikify$(Slider, { eagerness: 'hover' });
+export const MUISlider = qwikify$(Slider, { eagerness: 'hover', clientOnly:true });
 
 export const Counter = qwikify$(() => {
   const [count,setCount] = useState(0)
@@ -70,4 +70,4 @@ export const TableApp = qwikify$(() => {
       </div>
     </>
   );
-});
+}, { eagerness: 'hover', clientOnly:true });
