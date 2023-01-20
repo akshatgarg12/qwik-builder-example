@@ -1,6 +1,6 @@
 import { component$} from '@builder.io/qwik';
 import {  RegisteredComponent } from '@builder.io/sdk-qwik';
-import { Counter, TableApp } from '~/integrations/react/mui';
+import { Counter, TableApp } from '../integrations/react/mui';
 
 export const apiKey = '8335d18816304315aebeb7e9532281ce'; // Enter your key here
 
