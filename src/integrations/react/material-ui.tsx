@@ -38,4 +38,4 @@ export const OutlinedCard = ({word, meaning}: OutlinedCardProps) => {
   );
 }
 
-export default qwikify$(OutlinedCard)
+export default qwikify$(OutlinedCard, {clientOnly:true})
