@@ -6,6 +6,7 @@ export default component$(() => {
         <div>
             <h1>This page contains material-ui components (qwikifed)</h1>
             <MUIOutlinedCard
+                client:load
                 word="Handsome"
                 meaning="Good looking person"
             />
