@@ -31,10 +31,10 @@ export const WIDGETS: RegisteredComponent[] = [
         builtIn : true,
         noWrap: true
     },
-    {
-        component : MUITooltip,
-        name : "MUITooltip",
-        builtIn : true,
-        noWrap: true
-    }
+    // {
+    //     component : MUITooltip,
+    //     name : "MUITooltip",
+    //     builtIn : true,
+    //     noWrap: true
+    // }
 ]
