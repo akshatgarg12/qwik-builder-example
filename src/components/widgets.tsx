@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik"
 import {RegisteredComponent} from "@builder.io/sdk-qwik"
 import MUIOutlinedCard from '../integrations/react/material-ui'
-// import {MUITooltip} from '../integrations/react/tooltip'
+import {MUITooltip} from '../integrations/react/tooltip'
 import HelloWorld from "./hello-world"
 
 const Card = component$((props) => {
@@ -11,6 +11,11 @@ const Card = component$((props) => {
         )
     }
 )
+const Tooltip = component$((props) => {
+    return (
+        <MUITooltip {...props} />
+    )
+})
 
 export const WIDGETS: RegisteredComponent[] = [
     {
@@ -36,5 +41,11 @@ export const WIDGETS: RegisteredComponent[] = [
     //     name : "MUITooltip",
     //     builtIn : true,
     //     noWrap: true
-    // }
+    // },
+    {
+        component : Tooltip,
+        name : "Tooltip",
+        builtIn : true,
+        noWrap: true
+    }
 ]
