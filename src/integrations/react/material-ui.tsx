@@ -7,6 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { qwikify$ } from '@builder.io/qwik-react';
+import { BasicTooltip } from './tooltip';
 
 interface OutlinedCardProps { 
     word : string,
@@ -33,9 +34,10 @@ export const OutlinedCard = ({word, meaning}: OutlinedCardProps) => {
             <Button size="small">Learn More</Button>
             </CardActions>
         </React.Fragment>
+        <BasicTooltip />
       </Card>
     </Box>
   );
 }
 
-export default qwikify$(OutlinedCard)
+export default qwikify$(OutlinedCard, {clientOnly: true})
