@@ -1,6 +1,7 @@
 import { component$, Resource, useResource$ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
 import { getContent, RenderContent, getBuilderSearchParams } from "@builder.io/sdk-qwik";
+import {WIDGETS} from '../components/widgets'
 
 export const BUILDER_PUBLIC_API_KEY = '8335d18816304315aebeb7e9532281ce' // <-- Add your Public API KEY here
 export const BUILDER_MODEL = "page";
@@ -26,7 +27,7 @@ export default component$(() => {
           model={BUILDER_MODEL}
           content={content}
           apiKey={BUILDER_PUBLIC_API_KEY}
-          // customComponents = {CUSTOM_COMPONENTS}
+          customComponents = {WIDGETS}
         />
       )}
     />
