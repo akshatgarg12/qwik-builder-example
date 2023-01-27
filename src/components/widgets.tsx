@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik"
 import {RegisteredComponent} from "@builder.io/sdk-qwik"
 import MUIOutlinedCard from '../integrations/react/material-ui'
-import {MUITooltip} from '../integrations/react/tooltip'
+// import {MUITooltip} from '../integrations/react/tooltip'
 import HelloWorld from "./hello-world"
 
 const Card = component$((props) => {
