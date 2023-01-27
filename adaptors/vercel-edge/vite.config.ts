@@ -6,6 +6,7 @@ export default extendConfig(baseConfig, () => {
   return {
     build: {
       ssr: true,
+      minify:false,
       rollupOptions: {
         input: ['src/entry.vercel-edge.tsx', '@qwik-city-plan'],
       },
@@ -13,7 +14,7 @@ export default extendConfig(baseConfig, () => {
     },
     ssr:{
       target : "node",
-      noExternal : []
+      // noExternal : []
     },
     plugins: [
       vercelEdgeAdaptor({
