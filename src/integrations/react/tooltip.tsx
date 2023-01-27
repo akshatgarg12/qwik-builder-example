@@ -14,4 +14,4 @@ export const BasicTooltip = () => {
   );
 }
 
-export default qwikify$(BasicTooltip, {clientOnly : true})
+export const MUITooltip =  qwikify$(BasicTooltip, {clientOnly : true})
