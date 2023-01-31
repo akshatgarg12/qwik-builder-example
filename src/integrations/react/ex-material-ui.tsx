@@ -1,5 +1,7 @@
 /** @jsxImportSource react */
-import CircularProgress from '@material-ui/core/CircularProgress';
+import {
+    CircularProgress, 
+} from '@material-ui/core';
 import { qwikify$ } from '@builder.io/qwik-react';
 
 
