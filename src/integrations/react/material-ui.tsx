@@ -10,7 +10,7 @@ import { qwikify$ } from "@builder.io/qwik-react";
 import Tooltip from "@mui/material/Tooltip";
 
 export const MUITooltip = (props: any) => {
-  return <Tooltip title={props.title}>{props.children}</Tooltip>;
+  return <Tooltip placement="top" title={props.title}>{props.children}</Tooltip>;
 };
 
 interface OutlinedCardProps {
