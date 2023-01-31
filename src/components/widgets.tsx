@@ -1,9 +1,11 @@
 // import { component$ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 import { RegisteredComponent } from "@builder.io/sdk-qwik";
+import { QwikifyBasicTooltip } from "~/integrations/react/tooltip";
 // import MUIOutlinedCard from "../integrations/react/material-ui";
 // import { MUITooltip } from "../integrations/react/tooltip";
 // import HelloWorld from "./hello-world";
-
+const BasicTooltip = component$(() => <QwikifyBasicTooltip />)
 // const Card = component$((props) => {
 //   return (
 //     // @ts-ignore
@@ -15,6 +17,11 @@ import { RegisteredComponent } from "@builder.io/sdk-qwik";
 // });
 
 export const WIDGETS: RegisteredComponent[] = [
+  {
+    component : BasicTooltip,
+    name : "Basic tooltip",
+    builtIn: true
+  }
   // {
   //     component : Card,
   //     name : "MUIOutlinedCardIndirect",
