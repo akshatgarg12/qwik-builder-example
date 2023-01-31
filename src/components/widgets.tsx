@@ -18,34 +18,34 @@ const Tooltip = component$((props) => {
 })
 
 export const WIDGETS: RegisteredComponent[] = [
-    {
-        component : Card,
-        name : "MUIOutlinedCardIndirect",
-        builtIn : true,
-        noWrap: true
-    },
+    // {
+    //     component : Card,
+    //     name : "MUIOutlinedCardIndirect",
+    //     builtIn : true,
+    //     noWrap: true
+    // },
     // {
     //     component : MUIOutlinedCard,
     //     name : "MUIOutlinedCardDirect",
     //     builtIn : true,
     //     noWrap: true
     // },
-    {
-        component : HelloWorld,
-        name : "HelloWorld",
-        builtIn : true,
-        noWrap: true
-    },
+    // {
+    //     component : HelloWorld,
+    //     name : "HelloWorld",
+    //     builtIn : true,
+    //     noWrap: true
+    // },
     // {
     //     component : MUITooltip,
     //     name : "MUITooltip",
     //     builtIn : true,
     //     noWrap: true
     // },
-    {
-        component : Tooltip,
-        name : "Tooltip",
-        builtIn : true,
-        noWrap: true
-    }
+    // {
+    //     component : Tooltip,
+    //     name : "Tooltip",
+    //     builtIn : true,
+    //     noWrap: true
+    // }
 ]
