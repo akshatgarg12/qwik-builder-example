@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import MUIOutlinedCard, { MUICircularProgress } from "../../integrations/react/material-ui";
+import  { MUICircularProgress, MUIOutlinedCard } from "../../integrations/react/material-ui";
 
 export default component$(() => {
   return (

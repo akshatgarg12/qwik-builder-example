@@ -46,6 +46,6 @@ export const OutlinedCard = ({ word, meaning }: OutlinedCardProps) => {
   );
 };
 
-export default qwikify$(OutlinedCard, { clientOnly: true });
-export const QwikifyTooltip = qwikify$(Tooltip)
+export const MUIOutlinedCard =  qwikify$(OutlinedCard, { clientOnly: true });
+export const QwikifyTooltip = qwikify$(MUITooltip)
 export const MUICircularProgress = qwikify$(CircularProgress, {clientOnly:true})
