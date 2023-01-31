@@ -7,6 +7,11 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { qwikify$ } from "@builder.io/qwik-react";
+import Tooltip from "@mui/material/Tooltip";
+
+export const MUITooltip = (props: any) => {
+  return <Tooltip title={props.title}>{props.children}</Tooltip>;
+};
 
 interface OutlinedCardProps {
   word: string;

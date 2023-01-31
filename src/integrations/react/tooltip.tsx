@@ -1,12 +1,8 @@
 /** @jsxImportSource react */
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
-import Tooltip from "@mui/material/Tooltip";
 import { qwikify$ } from "@builder.io/qwik-react";
-
-export const MUITooltip = (props: any) => {
-  return <Tooltip title={props.title}>{props.children}</Tooltip>;
-};
+import { MUITooltip } from "./material-ui";
 
 export const BasicTooltip = ({ title }: any) => {
   return (
