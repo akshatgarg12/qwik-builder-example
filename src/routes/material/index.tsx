@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import MUIOutlinedCard from "../../integrations/react/material-ui";
+import MUIOutlinedCard, { MUICircularProgress } from "../../integrations/react/material-ui";
 
 export default component$(() => {
   return (
@@ -10,6 +10,7 @@ export default component$(() => {
         word="Handsome"
         meaning="Good looking person"
       />
+      <MUICircularProgress />
     </div>
   );
 });

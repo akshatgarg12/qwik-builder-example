@@ -6,6 +6,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import CircularProgress from "@mui/material/CircularProgress";
 import { qwikify$ } from "@builder.io/qwik-react";
 import Tooltip from "@mui/material/Tooltip";
 
@@ -46,3 +47,4 @@ export const OutlinedCard = ({ word, meaning }: OutlinedCardProps) => {
 };
 
 export default qwikify$(OutlinedCard, { clientOnly: true });
+export const MUICircularProgress = qwikify$(CircularProgress, {clientOnly:true})
