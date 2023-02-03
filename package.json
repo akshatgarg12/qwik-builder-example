@@ -50,6 +50,7 @@
     "vite-tsconfig-paths": "3.5.0"
   },
   "dependencies": {
+    "@builder.io/react": "^2.0.13",
     "@builder.io/sdk-qwik": "^0.0.37",
     "@mui/icons-material": "^5.11.0"
   }

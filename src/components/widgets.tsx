@@ -1,55 +1,25 @@
-// import { component$ } from "@builder.io/qwik";
 import { component$ } from "@builder.io/qwik";
 import { RegisteredComponent } from "@builder.io/sdk-qwik";
 import { QwikifyBasicTooltip } from "~/integrations/react/tooltip";
-// import MUIOutlinedCard from "../integrations/react/material-ui";
-// import { MUITooltip } from "../integrations/react/tooltip";
-// import HelloWorld from "./hello-world";
+import BuilderAccordion, { AccordionProps } from '~/integrations/react/accordion'
+import { accordionConfig } from "~/config/Accordion.config";
 const BasicTooltip = component$(() => <QwikifyBasicTooltip />)
-// const Card = component$((props) => {
-//   return (
-//     // @ts-ignore
-//     <MUIOutlinedCard {...props} />
-//   );
-// });
-// const Tooltip = component$((props) => {
-//   return <MUITooltip {...props} />;
-// });
-
+const Accordion = component$((props : AccordionProps) => <BuilderAccordion {...props}/>)
+const Name = component$(() => <h1>MY NAME</h1>)
 export const WIDGETS: RegisteredComponent[] = [
   {
     component : BasicTooltip,
     name : "Basic tooltip",
     builtIn: true
+  },
+  {
+    component: Name,
+    name : 'name',
+    builtIn:true
+  },
+  {
+    component : Accordion,
+    builtIn : true,
+    ...accordionConfig
   }
-  // {
-  //     component : Card,
-  //     name : "MUIOutlinedCardIndirect",
-  //     builtIn : true,
-  //     noWrap: true
-  // },
-  // {
-  //     component : MUIOutlinedCard,
-  //     name : "MUIOutlinedCardDirect",
-  //     builtIn : true,
-  //     noWrap: true
-  // },
-  // {
-  //     component : HelloWorld,
-  //     name : "HelloWorld",
-  //     builtIn : true,
-  //     noWrap: true
-  // },
-  // {
-  //     component : MUITooltip,
-  //     name : "MUITooltip",
-  //     builtIn : true,
-  //     noWrap: true
-  // },
-  // {
-  //     component : Tooltip,
-  //     name : "Tooltip",
-  //     builtIn : true,
-  //     noWrap: true
-  // }
 ];
