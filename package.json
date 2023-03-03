@@ -22,8 +22,8 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "^0.15.2",
-    "@builder.io/qwik-city": "0.0.128",
+    "@builder.io/qwik": "^0.20.1",
+    "@builder.io/qwik-city": "^0.5.2",
     "@builder.io/qwik-react": "0.2.1",
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@builder.io/react": "^2.0.13",
-    "@builder.io/sdk-qwik": "^0.0.37",
+    "@builder.io/sdk-qwik": "^0.1.11",
     "@mui/icons-material": "^5.11.0"
   }
 }
