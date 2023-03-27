@@ -27,12 +27,17 @@ export default component$(() => {
       value={builderContentRsrc}
       onPending={() => <div>Loading...</div>}
       onResolved={(content) => (
-        <RenderContent
-          model={BUILDER_MODEL}
-          content={content}
-          apiKey={BUILDER_PUBLIC_API_KEY}
-          customComponents={WIDGETS}
-        />
+        <div>
+          {/* <code>
+            {JSON.stringify(content, null, 2)}
+          </code> */}
+          <RenderContent
+            model={BUILDER_MODEL}
+            content={content}
+            apiKey={BUILDER_PUBLIC_API_KEY}
+            customComponents={WIDGETS}
+          />
+        </div>
       )}
     />
   );
