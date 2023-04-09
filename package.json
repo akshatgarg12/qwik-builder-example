@@ -22,9 +22,6 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "^0.23.0",
-    "@builder.io/qwik-city": "^0.6.5",
-    "@builder.io/qwik-react": "0.2.1",
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
     "@material-ui/core": "^4.12.4",
@@ -52,8 +49,10 @@
     "vite-tsconfig-paths": "3.5.0"
   },
   "dependencies": {
-    "@builder.io/react": "^2.0.13",
-    "@builder.io/sdk-qwik": "^0.1.11",
+    "@builder.io/qwik": "^0.101.0",
+    "@builder.io/qwik-city": "^0.101.0",
+    "@builder.io/qwik-react": "^0.5.0",
+    "@builder.io/sdk-qwik": "^0.2.0",
     "@mui/icons-material": "^5.11.0"
   }
 }
