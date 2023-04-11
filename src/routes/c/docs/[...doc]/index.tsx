@@ -6,10 +6,10 @@ export const onStaticGenerate: StaticGenerateHandler = async () => {
     return {
         params : [
             {
-                id : '/developers-1'
+                doc : '/developers-1'
             },
             {
-                id : '/getting-started'
+                doc : '/getting-started'
             }
         ]
     }
