@@ -149,10 +149,10 @@
   resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-0.101.0.tgz#c8dde695680c6d01fd4c4361f8a61b4e08e7e08b"
   integrity sha512-uXeN5tlquw8OKsRp/tQie2tEKv5h6AuyiVpNzdCqc6VUW5c0OEB063HnUr072u0ojL/3vPfdY1mAi+6MwMaEXQ==
 
-"@builder.io/sdk-qwik@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@builder.io/sdk-qwik/-/sdk-qwik-0.2.0.tgz#3b555f3a818b87577bf11273d1b6c8ec0c70098f"
-  integrity sha512-v5J87nKLTWdLsrvheA19NSvSRtf2o0kslBI+QXuTXZCawLJAEwJy7rS8A3sU22qGNuCvVWuTXG9aq6dsxY4iHw==
+"@builder.io/sdk-qwik@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@builder.io/sdk-qwik/-/sdk-qwik-0.2.1.tgz#36497f6b6bf1e82938e94dbbf2cf6674c548fda4"
+  integrity sha512-pDR7A1V8EOybWWd/oLmFPhEaxhKTaG2tr10vD1DqgSsLcIqeK2AMbllxNe/oLcwgKwBFI7zA9gCU/+u0TuV3iA==
 
 "@colors/colors@1.5.0":
   version "1.5.0"
