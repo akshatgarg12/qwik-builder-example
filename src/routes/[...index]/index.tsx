@@ -43,25 +43,27 @@
 //   );
 // });
 
-
-import { component$ } from '@builder.io/qwik';
-import { DocumentHead, routeLoader$ } from '@builder.io/qwik-city';
-import { getContent as getBuilderContent, RenderContent } from '@builder.io/sdk-qwik';
+import { component$ } from "@builder.io/qwik";
+import { DocumentHead, routeLoader$ } from "@builder.io/qwik-city";
+import {
+  getContent as getBuilderContent,
+  RenderContent,
+} from "@builder.io/sdk-qwik";
 
 // Enter your key here!
-export const apiKey = '8335d18816304315aebeb7e9532281ce'; // ggignore
+export const apiKey = "8335d18816304315aebeb7e9532281ce"; // ggignore
 
-export const useBuilderContentLoader = routeLoader$(async context => {
-  const path = `/${context.params.index}`
+export const useBuilderContentLoader = routeLoader$(async (context) => {
+  const path = `/${context.params.index}`;
   // Don't target on url and device for better cache efficiency
-  const userAttributes = { urlPath: path, device: '_' } as any
+  const userAttributes = { urlPath: path, device: "_" } as any;
   const data = await getBuilderContent({
-    model: 'page',
+    model: "page",
     apiKey: apiKey,
     userAttributes,
-  })
-  // console.log(data)
-  return data
+  });
+  console.log(JSON.stringify(data, null, 2));
+  return data;
 });
 
 export default component$(() => {
@@ -75,15 +77,11 @@ export default component$(() => {
 
   return (
     <div>
-      <RenderContent
-        model="page"
-        content={content.value}
-        apiKey={apiKey}
-      />
+      <RenderContent model="page" content={content.value} apiKey={apiKey} />
     </div>
-  );  
+  );
 });
 
 export const head: DocumentHead = {
-  title: 'Welcome to Qwik',
+  title: "Welcome to Qwik",
 };

@@ -128,13 +128,13 @@
   resolved "https://registry.yarnpkg.com/@bugsnag/safe-json-stringify/-/safe-json-stringify-6.0.0.tgz#22abdcd83e008c369902976730c34c150148a758"
   integrity sha512-htzFO1Zc57S8kgdRK9mLcPVTW1BY2ijfH7Dk2CeZmspTWKdKqSo1iwmqrq2WtRjFlo8aRZYgLX0wFrDXF/9DLA==
 
-"@builder.io/qwik-city@^0.102.0":
-  version "0.102.0"
-  resolved "https://registry.yarnpkg.com/@builder.io/qwik-city/-/qwik-city-0.102.0.tgz#99ac3523281ed23ebc19127bf46bfa0e893278d7"
-  integrity sha512-41MnJVr/YNTvPR6Sl5xh8hQFRwIy30L517qWh/XjFMUHb1IXz3HLF+ER5l692YKl372CElGzPEkf31IFcdxlnA==
+"@builder.io/qwik-city@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@builder.io/qwik-city/-/qwik-city-1.0.0.tgz#9fec6b4edeb87b4000c095c086967cd6b1002099"
+  integrity sha512-nHlDsvYHRWpSmRgg3bb93shn0p1OeMLvBYyIINitGDPxRSK1RyddtJXFAE24MlEEwzetF82xSte3SiC55oPUaQ==
   dependencies:
     "@mdx-js/mdx" "2.3.0"
-    "@types/mdx" "2.0.4"
+    "@types/mdx" "2.0.5"
     source-map "0.7.4"
     vfile "5.3.7"
     zod "^3.21.4"
@@ -144,15 +144,15 @@
   resolved "https://registry.yarnpkg.com/@builder.io/qwik-react/-/qwik-react-0.5.0.tgz#bbc536abc6a556a0e5df48051ed901409dbac8ba"
   integrity sha512-JdJWQWOJGv7ddQqEZwzR8wPh0IoCQZwD9qo75+reiQaLp6eH+Pjsm/kn1LaMQt6u72pCCNjnj5kEn/bnbfnIjQ==
 
-"@builder.io/qwik@^0.102.0":
-  version "0.102.0"
-  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-0.102.0.tgz#ae3978b9fa4c935a1ab0440451ddc087383f411d"
-  integrity sha512-27Q6ObitiyXtT/M0YyJdrmhCHk2VKBqFAnjuxbf1N3XivD4k8+0uMuwyPvlc3ee2s6OjfbAfzmM1YMNIf3BAjQ==
+"@builder.io/qwik@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-1.0.0.tgz#0dfa16f11be9df7d1cf5ac91adab04bb915066d0"
+  integrity sha512-U1eTIKTBUiW2dbPMCaTzS7K1bMCI9ovtfsvdduwnVThGXRSrX+v2X4U/UmHHPzfOjC55X5wYLc17cw5EwFBVVA==
 
-"@builder.io/sdk-qwik@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@builder.io/sdk-qwik/-/sdk-qwik-0.2.1.tgz#36497f6b6bf1e82938e94dbbf2cf6674c548fda4"
-  integrity sha512-pDR7A1V8EOybWWd/oLmFPhEaxhKTaG2tr10vD1DqgSsLcIqeK2AMbllxNe/oLcwgKwBFI7zA9gCU/+u0TuV3iA==
+"@builder.io/sdk-qwik@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@builder.io/sdk-qwik/-/sdk-qwik-0.3.0.tgz#8cbcd2c5f186a83a6b0b515614c4d6d057ea45c4"
+  integrity sha512-EzN/fiCMEVzRFccM0S9OMusLgcBqnYZVRnX5HiPKkKCGbP0P0xmpe5Q0drqKIUVyGx6mpoExQ18gfQiPIcvCeA==
 
 "@colors/colors@1.5.0":
   version "1.5.0"
@@ -1614,10 +1614,10 @@
   dependencies:
     "@types/unist" "*"
 
-"@types/mdx@2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@types/mdx/-/mdx-2.0.4.tgz#d1cad61ccc803b3c248c3d9990a2a6880bef537f"
-  integrity sha512-qCYrNdpKwN6YO6FVnx+ulfqifKlE3lQGsNhvDaW9Oxzyob/cRLBJWow8GHBBD4NxQ7BVvtsATgLsX0vZAWmtrg==
+"@types/mdx@2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@types/mdx/-/mdx-2.0.5.tgz#9a85a8f70c7c4d9e695a21d5ae5c93645eda64b1"
+  integrity sha512-76CqzuD6Q7LC+AtbPqrvD9AqsN0k8bsYo2bM2J8pmNldP1aIPAbzUQ7QbobyXL4eLr1wK5x8FZFe8eF/ubRuBg==
 
 "@types/mdx@^2.0.0":
   version "2.0.3"
