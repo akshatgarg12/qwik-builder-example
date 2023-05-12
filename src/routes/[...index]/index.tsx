@@ -45,6 +45,7 @@
 
 import { component$ } from "@builder.io/qwik";
 import { DocumentHead, routeLoader$ } from "@builder.io/qwik-city";
+import fs from "fs";
 import {
   getContent as getBuilderContent,
   RenderContent,
@@ -62,7 +63,7 @@ export const useBuilderContentLoader = routeLoader$(async (context) => {
     apiKey: apiKey,
     userAttributes,
   });
-  console.log(JSON.stringify(data, null, 2));
+  fs.writeFileSync("response.json", JSON.stringify(data, null, 2), "utf8");
   return data;
 });
 
