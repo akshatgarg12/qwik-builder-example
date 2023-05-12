@@ -76,7 +76,7 @@
                       }
                     },
                     {
-                      "id": "builder-pixel-4bxghiriwh",
+                      "id": "builder-pixel-mwgqi6s5xli",
                       "@type": "@builder.io/sdk:Element",
                       "tagName": "img",
                       "properties": {
@@ -125,7 +125,7 @@
                 "variations": {},
                 "name": "my-test-symbol",
                 "id": "5a1a743c8b504e4ab1bcd800e52c87f9",
-                "rev": "w0wcb9kd4kf"
+                "rev": "marb1ps1yn"
               }
             }
           }
@@ -141,7 +141,7 @@
         }
       },
       {
-        "id": "builder-pixel-b80q3q5rz1n",
+        "id": "builder-pixel-hvsl0y8zvft",
         "@type": "@builder.io/sdk:Element",
         "tagName": "img",
         "properties": {
@@ -202,5 +202,5 @@
   "variations": {},
   "name": "symbols",
   "id": "aaf763ec49b147cc9393aee47e0fd779",
-  "rev": "rs1ptwddq2r"
+  "rev": "hqal78prgj"
 }
