@@ -1,6 +1,6 @@
 import RenderBlocks from "../../components/render-blocks";
 
-import { Fragment, component$, h, useStore } from "@builder.io/qwik";
+import { component$, useStore } from "@builder.io/qwik";
 
 type ElementType = any;
 export interface TabsProps {
@@ -29,45 +29,52 @@ export const Tabs = component$((props: TabsProps) => {
       }}
     >
       {props.tabs
-        ? (props.tabs || []).map(function (item, index) {
+        ? (props.tabs || []).map((item, index) => {
             return (
-              <span
-                key={index}
-                style={{
-                  ...((props.tabs[state.activeTab] === item &&
-                    props.activeTabStyle) ||
-                    undefined),
-                }}
-                onClick$={(event) => {
-                  if (index === state.activeTab && props.collapsible) {
-                    state.activeTab = -1;
-                  } else {
-                    state.activeTab = index;
-                  }
-                }}
-                class={(() => {
-                  "builder-tab-wrap " +
+              <div>
+                <span
+                  key={index}
+                  style={{
+                    ...((props.tabs[state.activeTab] === item &&
+                      props.activeTabStyle) ||
+                      undefined),
+                  }}
+                  onClick$={() => {
+                    console.log("Clicked on tab", index);
+                    if (state.activeTab === index && props.collapsible) {
+                      state.activeTab = -1;
+                    } else {
+                      state.activeTab = index;
+                    }
+                  }}
+                  class={
+                    "builder-tab-wrap " +
                     (props.tabs[state.activeTab] === item
                       ? "builder-tab-active"
-                      : "");
-                })()}
-              >
-                <RenderBlocks
-                  parent={props.builderBlock.id}
-                  path={`component.options.tabs.${state.activeTab}.label`}
-                  blocks={item.label}
-                ></RenderBlocks>
-              </span>
+                      : "")
+                  }
+                >
+                  <RenderBlocks
+                    parent={props.builderBlock.id}
+                    path={`component.options.tabs.${state.activeTab}.label`}
+                    blocks={item.label}
+                  ></RenderBlocks>
+                </span>
+                {state.activeTab === index &&
+                props.tabs[state.activeTab].content.length === 0 ? (
+                  <div>
+                    <h1>Hello</h1>
+                    <RenderBlocks
+                      parent={props.builderBlock.id}
+                      path={`component.options.tabs.${state.activeTab}.content`}
+                      blocks={props.tabs[state.activeTab].content}
+                    ></RenderBlocks>
+                  </div>
+                ) : null}
+              </div>
             );
           })
         : null}
-      {props.tabs && props.tabs[state.activeTab] !== null ? (
-        <RenderBlocks
-          parent={props.builderBlock.id}
-          path={`component.options.tabs.${state.activeTab}.content`}
-          blocks={props.tabs[state.activeTab].content}
-        ></RenderBlocks>
-      ) : null}
     </span>
   );
 });

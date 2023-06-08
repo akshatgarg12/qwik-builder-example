@@ -49,6 +49,7 @@ import {
   getContent as getBuilderContent,
   RenderContent,
 } from "@builder.io/sdk-qwik";
+import { WIDGETS } from "../../components/widgets";
 
 // Enter your key here!
 export const apiKey = "8335d18816304315aebeb7e9532281ce"; // ggignore
@@ -76,7 +77,13 @@ export default component$(() => {
 
   return (
     <div>
-      <RenderContent model="page" content={content.value} apiKey={apiKey} />
+      <h1>Hello from QWIK</h1>
+      <RenderContent
+        model="page"
+        customComponents={WIDGETS}
+        content={content.value}
+        apiKey={apiKey}
+      />
     </div>
   );
 });

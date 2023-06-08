@@ -24,15 +24,13 @@ export const Carousel = component$((props: CarouselProps) => {
   return (
     <Slider
       builderBlock={props.builderBlock}
-      useChildrenForSlides={props.useChildrenForSlides}
-      slides={props.slides}
-      autoplay={props.autoplay}
-      autoplaySpeed={
-        props.autoplaySpeed ? props.autoplaySpeed * 1000 : undefined
+      useChildrenForSlides={
+        props.useChildrenForSlides ? props.useChildrenForSlides : false
       }
-      dots={(() => {
-        !props.hideDots;
-      })()}
+      slides={props.slides}
+      autoplay={props.autoplay ? props.autoplay : false}
+      autoplaySpeed={props.autoplaySpeed ? props.autoplaySpeed * 1000 : 1000}
+      dots={!props.hideDots}
       prevArrow={props.prevButton}
       frontArrow={props.nextButton}
     ></Slider>

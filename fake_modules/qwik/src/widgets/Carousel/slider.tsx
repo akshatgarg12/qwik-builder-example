@@ -4,12 +4,9 @@ import RenderBlocks from "../../components/render-blocks";
 
 import BuilderContext from "../../context/builder.context";
 
-import { BuilderElement } from "../../types/element";
-
 import {
-  Fragment,
   component$,
-  h,
+  noSerialize,
   useContext,
   useStore,
   useVisibleTask$,
@@ -27,26 +24,35 @@ export interface SliderProps {
   autoplay: boolean;
   autoplaySpeed: number;
 }
-export const prevArrowFn = function prevArrowFn(props, state, context) {
+export const prevArrowFn = function prevArrowFn(state) {
   state.glide.go("<");
 };
-export const nextArrowFn = function nextArrowFn(props, state, context) {
+export const nextArrowFn = function nextArrowFn(state) {
   state.glide.go(">");
 };
 export const Slider = component$((props: SliderProps) => {
   const context = useContext(BuilderContext);
   const state = useStore<any>({
-    glide: new Glide(".glide", {
-      type: "slider",
-      startAt: 0,
-      autoplay: props.autoplay ? props.autoplaySpeed * 1000 : undefined,
-    }),
+    glide: null,
   });
-  useVisibleTask$(() => {
-    state.glide.on("mount:after", () => {
-      console.log("slider mounted!");
-    });
-    state.glide.mount();
+  useVisibleTask$(({ track }) => {
+    track(() => state.glide);
+    if (!state.glide) {
+      console.log("slider init!");
+      state.glide = noSerialize(
+        new Glide(".glide", {
+          type: "slider",
+          startAt: 0,
+          autoplay: props.autoplay ? props.autoplaySpeed * 1000 : undefined,
+        })
+      );
+    }
+    if (state.glide) {
+      state.glide.on("mount:after", () => {
+        console.log("slider mounted!");
+      });
+      state.glide.mount();
+    }
   });
 
   return (
@@ -89,22 +95,20 @@ export const Slider = component$((props: SliderProps) => {
             return (
               <button
                 class="glide__bullet"
-                onClick$={(event) => (state.glide.index = index)}
+                onClick$={() => (state.glide.index = index)}
               ></button>
             );
           })}
         </div>
       ) : null}
       <div data-glide-el="controls">
-        <div onClick$={(event) => prevArrowFn(props, state, context)}>
+        <div onClick$={() => prevArrowFn(state)}>
           <RenderBlocks
             path="component.options.prevButton"
             blocks={props.prevArrow}
           ></RenderBlocks>
         </div>
-        <div
-          onClick$={(event) => nextArrowFn.bind(null, props, state, context)}
-        >
+        <div onClick$={() => nextArrowFn(state)}>
           <RenderBlocks
             path="component.options.nextButton"
             blocks={props.frontArrow}

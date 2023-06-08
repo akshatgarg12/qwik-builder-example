@@ -27,6 +27,10 @@
     "release:minor": "yarn run build && npm version minor && npm publish",
     "release:dev": "yarn run build && npm version prerelease && npm publish --tag dev"
   },
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0",
+    "masonry-layout": "^4.2.2"
+  },
   "devDependencies": {
     "@builder.io/qwik": "^0.16.2",
     "@types/node": "latest",
